@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="Project_Miam"
-config/features=PackedStringArray("4.2", "Mobile")
+run/main_scene="res://Scenes/Managers/SelectorManager.tscn"
+config/features=PackedStringArray("4.2", "C#", "Mobile")
 config/icon="res://Assets/icon.svg"
 
 [dotnet]
@@ -22,10 +23,16 @@ project/assembly_name="Project_Miam"
 
 folder_colors={
 "res://Assets/": "green",
+"res://Debug/": "pink",
 "res://Scenes/": "blue",
 "res://Scipts/": "purple"
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

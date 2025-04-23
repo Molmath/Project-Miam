@@ -12,11 +12,19 @@ config_version=5
 
 config/name="Project_Miam"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [dotnet]
 
 project/assembly_name="Project_Miam"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "green",
+"res://Scenes/": "blue",
+"res://Scipts/": "purple"
+}
 
 [rendering]
 

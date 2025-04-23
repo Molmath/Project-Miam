@@ -103,9 +103,15 @@ public static class Extension
         return false;
     }
 
-    public static bool Contain(this Action pAction, string pMethodName, out Delegate pDelegate)
+    public static bool Contain(this Action pAction, string pMethodName, out Action pDelegate)
     {
-        foreach (Delegate lMethod in pAction?.GetInvocationList())
+        if(pAction == null)
+        {
+            pDelegate = null;
+            return false;
+        }
+            
+        foreach (Action lMethod in pAction?.GetInvocationList())
         {
             if (lMethod.Method.Name == pMethodName)
             {

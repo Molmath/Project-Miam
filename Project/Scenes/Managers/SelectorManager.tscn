@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkaqyf3mk28cr"]
+
+[ext_resource type="Script" path="res://Scipts/Managers/SelectorManager.cs" id="1_o07sv"]
+[ext_resource type="PackedScene" uid="uid://b077qm6xc3x3h" path="res://Scenes/Managers/InputManager.tscn" id="1_thoxr"]
+
+[node name="SelectorManager" type="Node2D" node_paths=PackedStringArray("selectesZone")]
+script = ExtResource("1_o07sv")
+selectesZone = []
+autoActive = true
+
+[node name="InputManager" parent="." instance=ExtResource("1_thoxr")]

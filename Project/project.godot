@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Project_Miam"
 run/main_scene="res://Scenes/Managers/SelectorManager.tscn"
-config/features=PackedStringArray("4.2", "C#", "Mobile")
+config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://Assets/icon.svg"
 
 [dotnet]

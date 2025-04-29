@@ -4,14 +4,13 @@ using System.Drawing;
 
 // Author : Mathys Moles
 
-namespace Com.IsartDigital.ProjectName
+namespace Com.MathysMoles.Extension
 {
     public partial class ResponsiveSprite2D : Sprite2D
     {
-        private Vector2 baseResolution;
+        private Vector2 baseResolution = new Vector2(1920,1080);
         public override void _Ready()
         {
-            baseResolution = GetWindow().Size;
             Resize();
             GetViewport().SizeChanged += Resize;
         }

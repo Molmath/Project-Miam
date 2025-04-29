@@ -1,3 +1,5 @@
+using Com.IsartDigital.Miam.Movable;
+using Com.MathysMoles.Extension;
 using Godot;
 using System;
 
@@ -22,9 +24,11 @@ namespace Com.IsartDigital.Manager
         #endregion
 
         [Export] private float durationToStayMaintained = 50;
-        [Export] public CanvasItem[] selectesZone;
+        [Export] public ColorRect[] selectesZone;
 
-        private CanvasItem currentSelected;
+        [Export] Card lCard;
+
+        private ColorRect currentSelected;
         private int _currentIndexSelected;
 
         private Action processAction;
@@ -77,8 +81,18 @@ namespace Com.IsartDigital.Manager
                 
                 onSelect = false;
             }
-            if(!onSelect) CurrentIndexSelected++;
-            else currentSelected.Modulate = Colors.Black;
+            if(!onSelect)
+            {
+                CurrentIndexSelected++;
+                lCard.Target = currentSelected.GlobalPosition;
+
+            }
+            else
+            {
+                currentSelected.Modulate = Colors.Black;
+                //lCard.Target = currentSelected.GlobalPosition;
+            }
+                
             GD.Print("Exite");
            
         }
